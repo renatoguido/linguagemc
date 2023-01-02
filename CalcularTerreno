@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+  float altura, largura, area;
+  
+  
+  printf("Digite o valor do altura: ");
+  scanf("%f",&altura);
+  printf("Digite o valor da largura: ");
+  scanf("%f",&largura);
+
+  area = altura*largura;
+  printf("O terreno possui %.1f metros quadrados de área",area);
+
+
+    
+
+    return 0;
+}
