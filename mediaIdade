@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} } 
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+int main() {
+    
+    double mediaIdade;
+    int idade1, idade2;
+    char nome1 [50], nome2 [50];
+    
+    printf("Dados da primeira pessoa\n");
+    printf("Nome:\n");
+    ler_texto(nome1, 50);
+    limpar_entrada();
+    printf ("Idade:\n");
+    scanf ("%d", &idade1);
+    
+    printf("Dados da segunda pessoa\n");
+    printf("Nome:\n");
+    ler_texto(nome2, 50);
+    limpar_entrada();
+    printf ("Idade:\n");
+    scanf("%d", &idade2);
+    
+    mediaIdade = (idade1+idade2) / 2;
+    
+    printf("A medida de idade de %s e %s é de %.1lf", nome1, nome2, mediaIdade);
+    
+    
+
+
+
+    return 0;
+}
