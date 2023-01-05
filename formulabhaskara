@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+ 
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} }
+
+ 
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+ 
+
+int main() {
+
+
+    double a, b, c, delta, x1, x2;
+
+    printf("Coeficiente A:\n");
+    scanf("%lf", &a);
+
+    printf("Coeficiente B:\n");
+    scanf("%lf", &b);
+
+    printf("Coeficiente C:\n");
+    scanf("%lf", &c);
+
+    delta = sqrt( (b*b) - ( 4 * a * c));
+    
+    x1 = -b + delta / 2 * a;
+    
+    x2 = -b - delta / 2 * a;
+    
+
+
+    if( a = 0){
+        printf("O valor de a, deve ser diferente de 0");
+
+    }
+
+    else if (delta < 0){
+        printf("Esta equaçao nao possui raizes reais");
+
+    }
+    
+    else {
+        printf("X1 = %.4lf\n",x1);
+        
+        printf("X2 = %.4lf\n",x2);
+        
+    }
+
+ 
+
+    return 0;
+}
