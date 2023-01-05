@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+ 
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} }
+
+ 
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+ 
+
+int main() {
+
+
+    int n1, n2, crescente, descrescente;
+    
+    
+    while(n1 != n2){
+        printf("Digite dois numeros:\n");
+        scanf("%d", &n1 );
+        scanf("%d", &n2 );
+    
+        if(n1 < n2){
+            printf("Crescente!\n");
+        
+        }
+        else if( n1 > n2) {
+            printf("Descrescente!\n");
+        }
+    
+        else{}
+    
+        
+    
+    }
+    
+
+    return 0;
+}
