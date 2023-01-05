@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+ 
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} }
+
+ 
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+ 
+
+int main() {
+
+
+    int valor1, valor2, valor3, menor;
+    
+    printf("Digite o primeiro valor:");
+    scanf("%d", &valor1);
+    
+    printf("Digite o segundo valor:");
+    scanf("%d", &valor2);
+    
+    printf("Digite o terceiro valor:");
+    scanf("%d", &valor3);
+    
+    
+    if ( valor1 < valor2 && valor1 < valor3) {
+        menor = valor1;
+        
+    }
+    
+    else if (valor2 < valor1 && valor3 < valor1){
+        menor = valor2;
+    }
+    
+    else {
+        menor = valor3;
+        
+    }
+    
+    printf ("O numero menor = %d", menor);
+    
+    
+
+    return 0;
+}
