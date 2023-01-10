@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+ 
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} }
+
+ 
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+ 
+
+int main() {
+
+
+    int N, i, produto;
+    
+    printf("Deseja a tabuada para qual valor:");
+    scanf("%d", &N);
+    
+    for( i = 1; i <= 10; i ++ ){
+        produto = N * i;
+        printf ("%d x %d = %d\n", N, i, produto);
+    }
+    
+    
+
+    return 0;
+}
