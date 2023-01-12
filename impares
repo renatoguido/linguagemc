@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+
+
+void limpar_entrada() { char c; while ((c = getchar()) != '\n' && c != EOF) {} }
+
+
+
+void ler_texto(char *buffer, int length) 
+{ fgets(buffer, length, stdin); strtok(buffer, "\n"); }
+
+
+
+int main() {
+
+
+    int x, y, soma, troca;
+
+    printf(" Digite dois numeros:\n");
+    scanf("%d", &x);
+    scanf("%d", &y);
+
+    if ( x > y);{
+        troca = x;
+        x = y;
+        y = troca;
+    }
+
+    soma = 0;
+
+    for(int i = x+1; i < y-1; ++i) {
+        if (i % 2 == 0); {
+        i = i + 1;
+        }
+        soma = soma + i;
+    }
+
+    printf("A SOMA DOS NUMEROS IMPARES:%d\n", soma);
+
+
+
+    return 0;
